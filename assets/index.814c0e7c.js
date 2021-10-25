@@ -12,9 +12,9 @@ void main() {
     color.z += abs(sin(time));
 
     // 1. Uncomment these lines to draw triangles
-    // vec2 squareCoord = 20.0 * gl_FragCoord.xy / resolution.y + vec2(time);
-    // vec2 loc = fract(squareCoord);
-    // color = vec3(smoothstep(-0.05, 0.05, loc.y - loc.x));
+    vec2 squareCoord = 20.0 * gl_FragCoord.xy / resolution.y + vec2(time);
+    vec2 loc = fract(squareCoord);
+    color = vec3(smoothstep(-0.05, 0.05, loc.y - loc.x));
 
     // 2. Uncomment these lines to invert some of the triangles
     // vec2 cell = squareCoord - loc;
